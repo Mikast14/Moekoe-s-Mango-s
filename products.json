@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "productname": "Mango to go",
+        "prijs": "4",
+        "hoeveelheid": "2 mango's",
+        "image": "../The-Webshop-0a27a03a7d01-f8d7d7a06d5d/img/mango.png",
+        "productinfo": "Een mango die je mee kan nemen naar huis om nog lekker na te genieten"
+    },
+    {
+        "id": 2,
+        "productname": "Mangoijs",
+        "hoeveelheid": "2 bolletjes ijs met mango stukjes",
+        "prijs": " 5",
+        "image": "../The-Webshop-0a27a03a7d01-f8d7d7a06d5d/img/mangoijs.png",
+        "productinfo": "Een heerlijk kommetje ijs maat daar bij een heerlijk koekje en verse slagroom"
+    },
+    {
+        "id": 3,
+        "productname": "Mango taart",
+        "hoeveelheid": "Een stuk mango taart met slagroom en stukjes mango",
+        "prijs": " 7",
+        "image": "../The-Webshop-0a27a03a7d01-f8d7d7a06d5d/img/mangokwarktaart.png",
+        "productinfo": "Een heerlijke vervriesend stuk mango taart met verse slagroom en heerlijke verse stukjes mango"
+    },
+    {
+        "id": 4,
+        "productname": "Mangosap",
+        "hoeveelheid": "1 Glas mango sap",
+        "prijs": " 2",
+        "image": "../The-Webshop-0a27a03a7d01-f8d7d7a06d5d/img/mangosap.png",
+        "productinfo": "Een heerlijk verse gemaakte mangosap met ijs er door heen"
+    },
+    {
+        "id": 5,
+        "productname": "Mango milkshake",
+        "hoeveelheid": "1 Glas mango milkshake",
+        "prijs": " 4",
+        "image": "../The-Webshop-0a27a03a7d01-f8d7d7a06d5d/img/mangomilkshake.png",
+        "productinfo": "Een heerlijke milkshake met de smaak van mango"
+    },
+    {
+        "id": 6,
+        "productname": "Stikjes mango",
+        "hoeveelheid": "1 kommetje met stukjes mango",
+        "prijs": " 1",
+        "image": "../The-Webshop-0a27a03a7d01-f8d7d7a06d5d/img/kommango.png",
+        "productinfo": "Een kommetje stukjes mango"
+    },
+    {
+        "id": 7,
+        "productname": "Eton mess met de mango",
+        "hoeveelheid": "1 bord met Eton mess",
+        "prijs": " 4",
+        "image": "../The-Webshop-0a27a03a7d01-f8d7d7a06d5d/img/etonmess.png",
+        "productinfo": "Een heerlijke eton mess met mango en aardbeien"
+    }
+]
