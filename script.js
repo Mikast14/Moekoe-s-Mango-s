@@ -12,6 +12,7 @@ async function Product() {
         throw error;
     }
 }
+
 async function krijgproducten() {
     let data;
     if (localStorage.getItem("data")) {
