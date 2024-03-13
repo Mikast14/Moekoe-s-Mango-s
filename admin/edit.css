@@ -1,0 +1,38 @@
+body {
+    margin: 0rem;
+}
+
+.transparent-bg {
+    opacity: 0.2;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(8, 160, 114);
+    color: white;
+    font-size: small;
+
+}
+
+.start img {
+    width: 15rem;
+    height: auto;
+    padding-left: 2rem;
+}
+
+.einde {
+    display: flex;
+    justify-content: center;
+}
+
+.palm {
+    width: 6rem;
+    padding-top: 1rem;
+}

@@ -32,12 +32,16 @@ async function krijgproducten() {
         <div>
             <h1 class="product-name">${item.productname}</h1>
         </div>
+         <h1 class="product-prijs">${item.prijs}</h1>
         <div>
-        <button class="product-button" onclick="removeFromCart()">edit</button>
+        </div>
+        <div>
+        <button class="product-button" onclick="edit(${item.id})">edit</button>
         <button class="product-button" onclick="removeFromCart()">remove</button>
         </div>
         `;
         alles.appendChild(listItem);
+        console.log(item.id);
     }
 }
 
@@ -53,4 +57,7 @@ document.addEventListener("keydown", function (event) {
         krijgproducten();
     }
 });
+function edit(id) {
+    window.location.href = `edit.html?id=${id}`;
+}
 krijgproducten();
