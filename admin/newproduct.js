@@ -55,6 +55,8 @@ async function setItem() {
     }
 }
 
+let lastProductId = 7; // Initialize the last used product ID
+
 async function addProduct() {
     const productNameInput = document.getElementById("editableProductName");
     const prijsInput = document.getElementById("editablePrijs");
@@ -64,9 +66,12 @@ async function addProduct() {
 
     let data = await Product();
 
+    // Increment the last used product ID and use it for the new product
+    lastProductId++;
+
     const newProduct = {
-        id: data.length + 1,
-        productname: productNameInput.value,
+        id: lastProductId,
+        productName: productNameInput.value,
         prijs: parseFloat(prijsInput.value),
         hoeveelheid: productAmountInput.value,
         productinfo: productinfoInput.value,
@@ -84,6 +89,7 @@ async function addProduct() {
 
     console.log("Product added successfully");
 }
+
 async function refreshImage() {
     const imageInput = document.getElementById("editableImage");
     const productImage = document.getElementById("productImage");

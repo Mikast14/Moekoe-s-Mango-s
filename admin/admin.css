@@ -59,13 +59,38 @@ body {
     width: 6rem;
     padding-top: 1rem;
 }
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: absolute;
+    z-index: 1;
+    top: 5;
+    left: 0;
+    background-color: rgb(8, 160, 114);
+    overflow-x: hidden;
+    padding-top: 20px;
+    padding-bottom: 20rem;
+}
 
+.sidenav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+}
+
+.sidenav a:hover {
+    background-color: rgb(255, 179, 87);
+
+}
 .product {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
     margin-right: 2rem;
     margin-top: 2rem;
+    margin-left: 9rem;
 }
 
 .product-name {
