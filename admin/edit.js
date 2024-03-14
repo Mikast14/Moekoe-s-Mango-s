@@ -13,8 +13,6 @@ async function Product() {
     }
 }
 
-let indexInData;
-
 async function setItem() {
     const editElement = document.getElementById("edit");
     let data;
@@ -26,32 +24,65 @@ async function setItem() {
     }
     const urlParams = new URLSearchParams(window.location.search);
     let id = Number(urlParams.get('id'));
-    const item = data.find((items, index) => {
-        if (items.id === id) {
-            indexInData = index;
-        }
-        return items;
-    });
 
-    if (item) {
+    let indexInData = data.findIndex(item => item.id === id);
+
+    if (indexInData !== -1) {
+        const item = data[indexInData];
         editElement.innerHTML = `
                 <div>
-                    <input type="text" id="editablenaam" class="product-name" value="${item.productname}">
+                    <input type="text" id="editableProductName" class="product-name" value="${item.productname}">
                 </div>
-                 <input type="text" id="editableprijs" class="product-prijs" value="${item.prijs}">
                 <div>
+                    <input type="number" id="editablePrijs" class="product-name" value="${item.prijs}">
+                </div>
+                <div>
+                    <input type="text" id="editableProductamount" class="product-name" value="${item.hoeveelheid}">
+                </div>
+                <div>
+                    <input type="text" id="editableProductinfo" class="product-name" value="${item.productinfo}">
+                </div>
+                <div>
+                    <input type="text" id="editableImage" class="product-image" value="${item.image}">
+                </div>
+                <div>
+                    <img src="../${item.image}" alt="Product Image" id="productImage">
                 </div>
                 <button onclick="saveText()">Save</button>
                 `;
+    } else {
+        editElement.innerHTML = "Product not found";
     }
 }
 
 async function saveText() {
-    const inputElement = document.getElementById("editabletext");
+    const productNameInput = document.getElementById("editableProductName");
+    const prijsInput = document.getElementById("editablePrijs");
+    const productAmountInput = document.getElementById("editableProductamount");
+    const productinfoInput = document.getElementById("editableProductinfo");
+    const imageInput = document.getElementById("editableImage");
+    const productImage = document.getElementById("productImage");
     let data = await Product();
-    data[indexInData].productname = inputElement.value;
-    localStorage.setItem("data", JSON.stringify(data));
-    console.log("Product name updated:", data[indexInData].productname);
+    console.log(prijsInput);
+    const urlParams = new URLSearchParams(window.location.search);
+    let id = Number(urlParams.get('id'));
+    let indexInData = data.findIndex(item => item.id === id);
+
+    if (indexInData !== -1) {
+        data[indexInData].productname = productNameInput.value;
+        // Ensure to parse the "prijs" input value as a float before assigning it
+        data[indexInData].prijs = parseFloat(prijsInput.value);
+        data[indexInData].hoeveelheid = productAmountInput.value;
+        data[indexInData].productinfo = productinfoInput.value;
+        data[indexInData].image = imageInput.value;
+        localStorage.setItem("data", JSON.stringify(data));
+        productImage.src = data[indexInData].image;
+        window.location.reload();
+    } else {
+        console.error("Product not found");
+    }
 }
+
+
 
 setItem();

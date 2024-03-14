@@ -30,18 +30,18 @@ async function krijgproducten() {
             <img class="product-image" src="../${item.image}" alt="Foto of ${item.productname}">
         </div>
         <div>
-            <h1 class="product-name">${item.productname}</h1>
+            <h2 class="product-name">${item.productname}</h2>
         </div>
-         <h1 class="product-prijs">${item.prijs}</h1>
+         <h2 class="product-name">${item.prijs},-</h2>
         <div>
         </div>
         <div>
         <button class="product-button" onclick="edit(${item.id})">edit</button>
-        <button class="product-button" onclick="removeFromCart()">remove</button>
+        <button class="product-button" onclick="deleteItem(${item.id})">remove</button>
         </div>
         `;
         alles.appendChild(listItem);
-        console.log(item.id);
+        // console.log(item.id);
     }
 }
 
@@ -59,5 +59,23 @@ document.addEventListener("keydown", function (event) {
 });
 function edit(id) {
     window.location.href = `edit.html?id=${id}`;
+}
+function deleteItem(id) {
+    let number = `${id}`;
+    let data;
+    if (localStorage.getItem("data")) {
+        data = JSON.parse(localStorage.getItem("data"));
+    } else {
+        throw new Error('No data available');
+    }
+    for (let i = 0; i < data.length; i++) {
+        console.log(i, id);
+        if (data[i].id === number) {
+            data.splice(i, 1);
+        }
+    }
+    console.log(data);
+    localStorage.setItem('data', JSON.stringify(data));
+    krijgproducten();
 }
 krijgproducten();
