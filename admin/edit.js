@@ -30,26 +30,35 @@ async function setItem() {
     if (indexInData !== -1) {
         const item = data[indexInData];
         editElement.innerHTML = `
-                <div>
-                    <input type="text" id="editableProductName" class="product-name" value="${item.productname}">
+        <div class="product-edit">
+                 <div class="textarea">
+                    <div class="textbenaming">
+                    Naam: <input type="text" id="editableProductName" class="product-name" value="${item.productname}">
                 </div>
-                <div>
-                    <input type="number" id="editablePrijs" class="product-name" value="${item.prijs}">
+                <div class="textbenaming">
+                    Prijs: <input type="number" id="editablePrijs" class="product-name" value="${item.prijs}">
                 </div>
-                <div>
-                    <input type="text" id="editableProductamount" class="product-name" value="${item.hoeveelheid}">
                 </div>
-                <div>
-                    <input type="text" id="editableProductinfo" class="product-name" value="${item.productinfo}">
+                <div class="textarea">
+                    <div class="textbenaming">
+                    Hoeveelheid:
+                     <textarea type="text" id="editableProductamount" class="product-name">${item.hoeveelheid}
+                     </textarea>
+                    </div>
+                    <div class="textbenaming">
+                    Info:  <textarea type="text" id="editableProductinfo" class="product-name">${item.productinfo}
+                </textarea>
                 </div>
+                    </div>
                 <div>
-                    <input type="text" id="editableImage" class="product-image" value="../${item.image}">
+                    Foto: <input type="text" id="editableImage" class="product-image" value="../${item.image}">
                     <button onclick="refreshImage()">Refresh Image</button>
                 </div>
                 <div>
                     <img src="../${item.image}" alt="Product Image" id="productImage">
-                </div>
-                <button onclick="saveText()">Save</button>
+                    </div>
+                    <button class="buttonsave" onclick="saveText()">Save</button>
+                    </div>
                 `;
     } else {
         editElement.innerHTML = "Product not found";

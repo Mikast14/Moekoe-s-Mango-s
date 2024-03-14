@@ -3,11 +3,23 @@ input {
     font-weight: 400;
     font-style: normal;
 }
+
+div {
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+textarea {
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 button {
     font-family: "Madimi One", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
+
 body {
     margin: 0rem;
 }
@@ -46,6 +58,71 @@ body {
     width: 6rem;
     padding-top: 1rem;
 }
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 5;
+    left: 0;
+    background-color: rgb(8, 160, 114);
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+}
+
+.sidenav a:hover {
+    background-color: rgb(255, 179, 87);
+
+}
 #productImage {
-    width: 3rem;
+    width: 10rem;
+    margin-top: 2rem;
+}
+
+.product-edit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    background-color: white;
+    margin: 1rem 20rem;
+    border-radius: 5rem;
+    border: rgb(255, 179, 87) solid;
+}
+
+.product-edit button {
+    border-radius: 10rem;
+    border-color: rgb(255, 179, 87);
+    background-color: rgb(8, 160, 114);
+    color: white;
+    width: 11rem;
+}
+
+#editableProductamount {
+    width: 300px;
+    height: 50px;
+}
+
+#editableProductinfo {
+    width: 300px;
+    height: 50px;
+}
+.textarea {
+    display: flex;
+}
+.textbenaming {
+    display: flex;
+    flex-direction: column;
+}
+.buttonsave {
+    margin-bottom: 1rem;
 }
