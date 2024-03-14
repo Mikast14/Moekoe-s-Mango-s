@@ -3,6 +3,9 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .transparent-bg {
@@ -39,28 +42,34 @@ body {
     width: 100px;
     padding-top: 10px;
 }
+
 h1 {
     display: flex;
     justify-content: center;
 }
+
 .home-button {
     border-radius: 100px;
     padding: 10px;
     background-color: rgb(20, 198, 145);
     border-color: rgb(38, 139, 108);
-    width:100px;
+    width: 7rem;
 }
+
 .Thanks {
     display: flex;
     flex-direction: column;
-    height: 50px;
+    height: 6rem;
     align-items: center;
-    border-radius: 100px;
+    border-radius: 1rem;
     justify-content: center;
-    padding-right: 40px;
-    margin-top: 40px;
+    margin-top: 4rem;
 }
+
 a {
     color: black;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

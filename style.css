@@ -1,3 +1,22 @@
+h1 {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h3 {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h5 {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 body {
   margin: 0rem;
 }
@@ -55,23 +74,27 @@ body {
   color: rgb(52, 51, 51);
 
 }
+
 .wereldkaart {
   width: 50rem;
   height: 20rem;
   margin-top: 5rem;
-  margin-right: 2rem ;
+  margin-right: 2rem;
 }
+
 .firstcart {
   display: flex;
   flex-wrap: wrap;
 }
+
 .upperpartend {
   display: flex;
   justify-content: end;
 }
+
 .product {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   margin: 1rem 2rem;
   padding: 1.5rem 1.2rem;
   width: 20rem;
@@ -79,6 +102,7 @@ body {
   background-color: rgb(8, 160, 114);
   border-radius: 1rem;
 }
+
 .prijs-winkelwagen {
   display: flex;
   align-items: center;
@@ -100,7 +124,8 @@ body {
   margin-bottom: 2rem;
 }
 
-#product h1, h5 {
+#product h1,
+h5 {
   margin-bottom: 1rem;
 }
 
@@ -117,6 +142,7 @@ body {
 .productimg {
   width: 10px;
 }
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 
 * {
@@ -136,6 +162,7 @@ body {
   margin-top: 30px;
   margin-right: 80px;
 }
+
 .winkelmand {
   display: flex;
   justify-content: center;
@@ -143,6 +170,7 @@ body {
   margin-top: 30px;
   margin-right: 20px;
 }
+
 .footer {
   position: relative;
   width: 100%;
