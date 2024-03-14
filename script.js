@@ -31,17 +31,17 @@ async function krijgproducten() {
             <h1 class="product-name">${item.productname}</h1>
             <div class="prijs-winkelwagen">
             <h3 class="product-price">${item.prijs},-</h3>
-            <button class="product-button onclick="buttonWithRedDot(${item.id});">
+            <button class="product-button" onclick="buttonWithRedDot(${item.id})">
             <img class="buttonimg" src="../The-Webshop-0a27a03a7d01-f8d7d7a06d5d/img/shopping-cart-38-48.png" alt="">
             </button>
             </div>
             <h5 class="product-hoeveelheid">${item.hoeveelheid}</h5>
             <h5 class="product-info">${item.productinfo}</h5>
-
         `;
         alles.appendChild(listItem);
     }
 }
+
 function button(productId) {
     const selectedProduct = getProductById(productId);
     console.log(selectedProduct);
@@ -79,10 +79,12 @@ function showRedDot() {
     const redDot = document.getElementById('redDot');
     redDot.style.display = 'block';
 }
+
 function hideRedDot() {
     const redDot = document.getElementById('redDot');
     redDot.style.display = 'none';
 }
+
 function updateRedDotVisibility() {
     const cartProducts = localStorage.getItem("cartProducts")
         ? JSON.parse(localStorage.getItem("cartProducts"))
@@ -94,6 +96,7 @@ function updateRedDotVisibility() {
         hideRedDot();
     }
 }
+
 document.addEventListener("keydown", function (event) {
     if (event.key === "c") {
         console.log("clear");
@@ -102,5 +105,6 @@ document.addEventListener("keydown", function (event) {
         krijgproducten();
     }
 });
+
 updateRedDotVisibility();
 krijgproducten();

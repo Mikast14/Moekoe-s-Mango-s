@@ -12,6 +12,23 @@ async function Product() {
         throw error;
     }
 }
+
+function goToAddProductPage() {
+    window.location.href = "newproduct.html";
+}
+
+
+function addAddProductButton() {
+    const addButton = document.createElement('button');
+    addButton.textContent = '+';
+    addButton.classList.add('newproductbutton');
+    addButton.addEventListener('click', goToAddProductPage);
+    document.body.appendChild(addButton);
+}
+
+
+window.addEventListener('load', addAddProductButton);
+
 async function krijgproducten() {
     let data;
     if (localStorage.getItem("data")) {
@@ -41,7 +58,6 @@ async function krijgproducten() {
         </div>
         `;
         alles.appendChild(listItem);
-        // console.log(item.id);
     }
 }
 
@@ -61,21 +77,18 @@ function edit(id) {
     window.location.href = `edit.html?id=${id}`;
 }
 function deleteItem(id) {
-    let number = `${id}`;
-    let data;
-    if (localStorage.getItem("data")) {
-        data = JSON.parse(localStorage.getItem("data"));
+    let data = JSON.parse(localStorage.getItem("data"));
+    if (!data) {
+        console.error('No data available');
+        return;
+    }
+    const index = data.findIndex(item => item.id === id);
+    if (index !== -1) {
+        data.splice(index, 1);
+        localStorage.setItem('data', JSON.stringify(data));
+        krijgproducten();
     } else {
-        throw new Error('No data available');
+        console.error(`Item with ID ${id} not found`);
     }
-    for (let i = 0; i < data.length; i++) {
-        console.log(i, id);
-        if (data[i].id === number) {
-            data.splice(i, 1);
-        }
-    }
-    console.log(data);
-    localStorage.setItem('data', JSON.stringify(data));
-    krijgproducten();
 }
 krijgproducten();

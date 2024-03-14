@@ -26,7 +26,13 @@ body {
     height: auto;
     padding-left: 2rem;
 }
-
+.midden {
+    display: flex;
+}
+.midden a {
+    margin: 0rem 2rem;
+    font-size: 1.5rem;
+}
 .einde {
     display: flex;
     justify-content: center;
@@ -81,3 +87,16 @@ body {
     text-align: center;
     align-items: center;
 }
+.newproductbutton {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        border-radius: 3rem;
+        z-index: 9999;
+        background-color: #36cc74;
+        color: #fff;
+        border: none;
+        padding: 15px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
