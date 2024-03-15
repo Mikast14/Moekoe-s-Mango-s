@@ -51,11 +51,11 @@ async function setItem() {
                 </div>
                     </div>
                 <div>
-                    Foto: <input type="text" id="editableImage" class="product-image" value="../${item.image}">
+                    Foto: <input type="text" id="editableImage" class="product-image" value="${item.image}">
                     <button onclick="refreshImage()">Refresh Image</button>
                 </div>
                 <div>
-                    <img src="../${item.image}" alt="Product Image" id="productImage">
+                    <img src="${item.image}" alt="Product Image" id="productImage">
                     </div>
                     <button class="buttonsave" onclick="saveText()">Save</button>
                     </div>
