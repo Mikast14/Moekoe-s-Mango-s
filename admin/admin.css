@@ -1,18 +1,21 @@
 a {
-        font-family: "Madimi One", sans-serif;
-            font-weight: 400;
-            font-style: normal;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
+
 h2 {
     font-family: "Madimi One", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
+
 button {
     font-family: "Madimi One", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
+
 body {
     margin: 0rem;
 }
@@ -41,15 +44,18 @@ body {
     height: auto;
     padding-left: 2rem;
 }
+
 .midden {
     display: flex;
 }
+
 .midden a {
     margin: 0rem 2rem;
     font-size: 1.5rem;
     text-decoration: none;
     color: rgb(255, 179, 87)
 }
+
 .einde {
     display: flex;
     justify-content: center;
@@ -59,6 +65,7 @@ body {
     width: 6rem;
     padding-top: 1rem;
 }
+
 .sidenav {
     height: 100%;
     width: 200px;
@@ -84,6 +91,20 @@ body {
     background-color: rgb(255, 179, 87);
 
 }
+
+.sidenavscroll {
+    height: 100vh;
+    width: 200px;
+    position: fixed;
+    z-index: -1;
+    top: 5;
+    left: 0;
+    background-color: rgb(8, 160, 114);
+    overflow-x: hidden;
+    padding-top: 20px;
+    padding-bottom: 20rem;
+}
+
 .product {
     display: flex;
     justify-content: space-between;
@@ -98,7 +119,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: 0rem 5rem;
-    
+
 }
 
 .product-image {
@@ -124,26 +145,52 @@ body {
     justify-content: center;
     width: 20%;
 }
+
 .product div h1 {
     display: flex;
     text-align: center;
     align-items: center;
 }
+
 .newproductbutton {
-        position: fixed;
-        bottom: 10px;
-        left: 10px;
-        border-radius: 3rem;
-        z-index: 9999;
-        background-color: #36cc74;
-        color: #fff;
-        border: none;
-        padding: 15px 20px;
-        font-size: 16px;
-        cursor: pointer;
-    }
-.hoi {
     position: fixed;
-    bottom: 0;
-    right: 0;
+    bottom: 10px;
+    left: 10px;
+    border-radius: 3rem;
+    z-index: 9999;
+    background-color: #36cc74;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.Resetbutton {
+    position: fixed;
+    bottom: 10px;
+    left: 70px;
+    border-radius: 3rem;
+    z-index: 1;
+    background-color: #36cc74;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.product-button {
+    border-radius: 3rem;
+    margin-right: 1rem;
+    z-index: 1;
+    background-color: #36cc74;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgb(255, 179, 87);;
 }

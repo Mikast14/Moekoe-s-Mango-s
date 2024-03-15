@@ -42,11 +42,11 @@ async function setItem() {
                     <input type="text" id="editableProductinfo" class="product-name" placeholder="Product Info">
                 </div>
                  <div>
-                    <input type="text" id="editableImage" class="product-image" value="../img/placeholder.png">
+                <input type="text" id="editableImage" class="product-image" value="/Moekoes-Mangos/img/placeholder.png">
                     <button onclick="refreshImage()">Refresh Image</button>
                 </div>
                 <div>
-                    <img src="../img/placeholder.png" alt="Product Image" id="productImage">
+                    <img src="/Moekoes-Mangos/img/placeholder.png" alt="Product Image" id="productImage">
                 </div>
                 <button onclick="addProduct()">Add Product</button>
                 `;
