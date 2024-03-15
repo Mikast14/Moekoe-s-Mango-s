@@ -27,7 +27,7 @@ async function krijgproducten() {
         const listItem = document.createElement('div');
         listItem.classList.add('product');
         listItem.innerHTML = `
-            <img class="product-image" src="${item.image}" alt="Foto of ${item.productname}">
+            <img class="product-image" src="../${item.image}" alt="Foto of ${item.productname}">
             <h1 class="product-name">${item.productname}</h1>
             <div class="prijs-winkelwagen">
             <h3 class="product-price">${item.prijs},-</h3>
