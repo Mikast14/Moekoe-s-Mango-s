@@ -44,7 +44,7 @@ async function krijgproducten() {
         listItem.classList.add('product');
         listItem.innerHTML = `
         <div>
-            <img class="product-image" src="../${item.image}" alt="Foto of ${item.productname}">
+            <img class="product-image" src="${item.image}" alt="Foto of ${item.productname}">
         </div>
         <div>
             <h2 class="product-name">${item.productname}</h2>
