@@ -30,7 +30,7 @@ async function setItem() {
     if (!newproduct) {
         editElement.innerHTML = `
                 <div>
-                    <input type="text" id="editableProductName" class="product-name" placeholder="Product Name">
+                    <input type="text" id="productname" class="product-name" placeholder="product name">
                 </div>
                 <div>
                     <input type="number" id="editablePrijs" class="product-name" placeholder="Price">
@@ -53,25 +53,27 @@ async function setItem() {
     } else {
         editElement.innerHTML = "Product not found";
     }
+
+
+    lastProductId = Math.max(...data.map(item => item.id), 0);
 }
 
-let lastProductId = 7; // Initialize the last used product ID
+let lastProductId = 0;
 
 async function addProduct() {
-    const productNameInput = document.getElementById("editableProductName");
+    const productname = document.getElementById("productname");
     const prijsInput = document.getElementById("editablePrijs");
     const productAmountInput = document.getElementById("editableProductamount");
     const productinfoInput = document.getElementById("editableProductinfo");
     const imageInput = document.getElementById("editableImage");
 
-    let data = await Product();
+    let data = JSON.parse(localStorage.getItem("data"));
 
-    // Increment the last used product ID and use it for the new product
     lastProductId++;
 
     const newProduct = {
         id: lastProductId,
-        productName: productNameInput.value,
+        productname: productname.value,
         prijs: parseFloat(prijsInput.value),
         hoeveelheid: productAmountInput.value,
         productinfo: productinfoInput.value,
@@ -80,14 +82,8 @@ async function addProduct() {
 
     data.push(newProduct);
     localStorage.setItem("data", JSON.stringify(data));
-
-    productNameInput.value = "";
-    prijsInput.value = "";
-    productAmountInput.value = "";
-    productinfoInput.value = "";
-    imageInput.value = "";
-
     console.log("Product added successfully");
+    window.location.href = "admin.html";
 }
 
 async function refreshImage() {
@@ -95,4 +91,5 @@ async function refreshImage() {
     const productImage = document.getElementById("productImage");
     productImage.src = imageInput.value;
 }
+
 setItem();

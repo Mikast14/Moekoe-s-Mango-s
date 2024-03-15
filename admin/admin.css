@@ -142,3 +142,8 @@ body {
         font-size: 16px;
         cursor: pointer;
     }
+.hoi {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}

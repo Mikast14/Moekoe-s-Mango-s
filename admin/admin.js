@@ -1,6 +1,6 @@
 async function Product() {
     try {
-        const response = await fetch('products.json');
+        const response = await fetch('/Moekoes-Mangos/products.json');
         if (!response.ok) {
             throw new Error('Failed to fetch products');
         }
@@ -90,5 +90,11 @@ function deleteItem(id) {
     } else {
         console.error(`Item with ID ${id} not found`);
     }
+}
+let data = JSON.parse(localStorage.getItem("data"));
+async function resetdata() {
+    localStorage.removeItem("data");
+    await Product();
+    krijgproducten();
 }
 krijgproducten();
