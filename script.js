@@ -32,7 +32,7 @@ async function krijgproducten() {
             <div class="prijs-winkelwagen">
             <h3 class="product-price">${item.prijs},-</h3>
             <button class="product-button" onclick="buttonWithRedDot(${item.id})">
-            <img class="buttonimg" src="../The-Webshop-0a27a03a7d01-f8d7d7a06d5d/img/shopping-cart-38-48.png" alt="">
+            <img class="buttonimg" src="../Moekoes-Mangos/img/shopping-cart-38-48.png" alt="">
             </button>
             </div>
             <h5 class="product-hoeveelheid">${item.hoeveelheid}</h5>
