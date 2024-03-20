@@ -58,9 +58,22 @@ document.addEventListener("keydown", function (event) {
         localStorage.clear();
     }
 });
-updateCart();
+function saveOrderList(orderList) {
+    let existingOrders = JSON.parse(localStorage.getItem("orderList")) || [];
+    existingOrders.push(orderList);
+    localStorage.setItem("orderList", JSON.stringify(existingOrders));
+}
+
+
+
+function pay() {
+    const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
+    saveOrderList(cartProducts);
+    clearLocalStorage();
+}
 
 function clearLocalStorage() {
-    localStorage.clear();
+    localStorage.removeItem("cartProducts");
     window.location.href = '../order-confirmation/order-confirmation.html';
 }
+updateCart();
