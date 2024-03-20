@@ -68,9 +68,21 @@ function saveOrderList(orderList) {
 
 function pay() {
     const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
-    saveOrderList(cartProducts);
+    const orderDateTime = new Date().toISOString();
+    const order = {
+        products: cartProducts,
+        dateTime: orderDateTime,
+    };
+    saveOrder(order);
     clearLocalStorage();
 }
+
+function saveOrder(order) {
+    let existingOrders = JSON.parse(localStorage.getItem("orderList")) || [];
+    existingOrders.push(order);
+    localStorage.setItem("orderList", JSON.stringify(existingOrders));
+}
+
 
 function clearLocalStorage() {
     localStorage.removeItem("cartProducts");
