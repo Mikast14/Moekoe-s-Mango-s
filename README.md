@@ -45,3 +45,6 @@ I have made a <a href="https://mikast14.github.io/Moekoes-Mangos/admin/admin.htm
 <li>Better styling</li>
 <li>Mobile Friendly</li>
 <li>To make it more practical</li>
+
+<h4>This was my sketch i made before i started</h4>
+<img src="Plan/voorbeeld.png" alt="">
