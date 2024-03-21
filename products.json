@@ -3,56 +3,56 @@
         "id": 1,
         "productname": "Mango to go",
         "prijs": 4,
-        "hoeveelheid": "2 mango's",
+        "hoeveelheid": "2 Mangoes",
         "image": "/Moekoes-Mangos/img/mango.png",
-        "productinfo": "Een mango die je mee kan nemen naar huis om nog lekker na te genieten"
+        "productinfo": "A mango that you can take home and enjoy afterwards"
     },
     {
         "id": 2,
-        "productname": "Mangoijs",
-        "hoeveelheid": "2 bolletjes ijs met mango stukjes",
+        "productname": "Mango ice cream",
+        "hoeveelheid": "2 scoops of ice cream with mango pieces",
         "prijs": 5,
         "image": "/Moekoes-Mangos/img/mangoijs.png",
-        "productinfo": "Een heerlijk kommetje ijs maat daar bij een heerlijk koekje en verse slagroom"
+        "productinfo": "A delicious bowl of ice cream accompanied by a delicious cookie and fresh whipped cream"
     },
     {
         "id": 3,
-        "productname": "Mango taart",
-        "hoeveelheid": "Een stuk mango taart met slagroom en stukjes mango",
+        "productname": "Mango pie",
+        "hoeveelheid": "A piece of mango cake with whipped cream and pieces of mango",
         "prijs": 7,
         "image": "/Moekoes-Mangos/img/mangokwarktaart.png",
-        "productinfo": "Een heerlijke vervriesend stuk mango taart met verse slagroom en heerlijke verse stukjes mango"
+        "productinfo": "A delicious freezing piece of mango cake with fresh whipped cream and delicious fresh pieces of mango"
     },
     {
         "id": 4,
-        "productname": "Mangosap",
-        "hoeveelheid": "1 Glas mango sap",
+        "productname": "Mango juice",
+        "hoeveelheid": "1 Glass of mango juice",
         "prijs": 2,
         "image": "/Moekoes-Mangos/img/kommango.png",
-        "productinfo": "Een heerlijk verse gemaakte mangosap met ijs er door heen"
+        "productinfo": "A delicious freshly made mango juice with ice in it"
     },
     {
         "id": 5,
         "productname": "Mango milkshake",
-        "hoeveelheid": "1 Glas mango milkshake",
+        "hoeveelheid": "1 Glass of mango milkshake",
         "prijs": 4,
         "image": "/Moekoes-Mangos/img/mangomilkshake.png",
-        "productinfo": "Een heerlijke milkshake met de smaak van mango"
+        "productinfo": "A delicious milkshake with the taste of mango"
     },
     {
         "id": 6,
-        "productname": "Stikjes mango",
+        "productname": "Pieces of mango",
         "hoeveelheid": "1 kommetje met stukjes mango",
         "prijs": 1,
         "image": "/Moekoes-Mangos/img/kommango.png",
-        "productinfo": "Een kommetje stukjes mango"
+        "productinfo": "A bowl of mango pieces"
     },
     {
         "id": 7,
-        "productname": "Eton mess met mango",
-        "hoeveelheid": "1 bord met Eton mess",
+        "productname": "Eton mess with mango",
+        "hoeveelheid": "1 plate with Eton mess",
         "prijs": 4,
         "image": "/Moekoes-Mangos/img/etonmess.png",
-        "productinfo": "Een heerlijke eton mess met mango en aardbeien"
+        "productinfo": "A delicious eton mess with mango and strawberries"
     }
 ]

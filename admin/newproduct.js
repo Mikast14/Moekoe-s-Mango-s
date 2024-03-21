@@ -29,26 +29,37 @@ async function setItem() {
 
     if (!newproduct) {
         editElement.innerHTML = `
-                <div>
-                    <input type="text" id="productname" class="product-name" placeholder="product name">
+        <div class="product-edit">
+                <div class="textarea">
+                    <div class="textbenaming">
+                   Name: <input type="text" id="productname" class="product-name" placeholder="product name">
                 </div>
-                <div>
-                    <input type="number" id="editablePrijs" class="product-name" placeholder="Price">
+                <div class="textbenaming">
+                   Price: <input type="number" id="editablePrijs" class="product-name" placeholder="Price">
                 </div>
-                <div>
-                    <input type="text" id="editableProductamount" class="product-name" placeholder="Quantity">
                 </div>
+                 <div class="textarea">
+                    <div class="textbenaming">
+                    Amount:
+                    <textarea type="text" id="editableProductamount" class="product-name" placeholder="Quantity">
+                 </textarea>
+                    </div>
+                    <div class="textbenaming">
+                   Information: 
+                   <textarea type="text" id="editableProductinfo" class="product-name" placeholder="Product Info">
+                 </textarea>
+                    </div>
+                    </div>
                 <div>
-                    <input type="text" id="editableProductinfo" class="product-name" placeholder="Product Info">
-                </div>
-                 <div>
+                 Image: 
                 <input type="text" id="editableImage" class="product-image" value="/Moekoes-Mangos/img/placeholder.png">
                     <button onclick="refreshImage()">Refresh Image</button>
-                </div>
+                 </div>
                 <div>
                     <img src="/Moekoes-Mangos/img/placeholder.png" alt="Product Image" id="productImage">
                 </div>
                 <button onclick="addProduct()">Add Product</button>
+                </div>
                 `;
     } else {
         editElement.innerHTML = "Product not found";

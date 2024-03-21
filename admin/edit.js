@@ -33,25 +33,26 @@ async function setItem() {
         <div class="product-edit">
                  <div class="textarea">
                     <div class="textbenaming">
-                    Naam: <input type="text" id="editableProductName" class="product-name" value="${item.productname}">
+                    Name: <input type="text" id="editableProductName" class="product-name" value="${item.productname}">
                 </div>
                 <div class="textbenaming">
-                    Prijs: <input type="number" id="editablePrijs" class="product-name" value="${item.prijs}">
+                    Price: <input type="number" id="editablePrijs" class="product-name" value="${item.prijs}">
                 </div>
                 </div>
                 <div class="textarea">
                     <div class="textbenaming">
-                    Hoeveelheid:
+                    Amount:
                      <textarea type="text" id="editableProductamount" class="product-name">${item.hoeveelheid}
                      </textarea>
                     </div>
                     <div class="textbenaming">
-                    Info:  <textarea type="text" id="editableProductinfo" class="product-name">${item.productinfo}
+                    Information:
+                    <textarea type="text" id="editableProductinfo" class="product-name">${item.productinfo}
                 </textarea>
                 </div>
                     </div>
                 <div>
-                    Foto: <input type="text" id="editableImage" class="product-image" value="${item.image}">
+                    Image: <input type="text" id="editableImage" class="product-image" value="${item.image}">
                     <button onclick="refreshImage()">Refresh Image</button>
                 </div>
                 <div>
