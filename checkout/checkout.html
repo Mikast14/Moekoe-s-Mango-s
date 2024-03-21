@@ -25,21 +25,12 @@
         <div class="einde"><img class="palm" src="../img/palm.png" alt="">
         </div>
     </nav>
-    <section style="padding: 4rem">
-        <h1>Your Shopping Cart</h1>
-        <div id="empty-cart-message" style="display: none;">
-            <p>Your shopping cart is empty.</p>
+    <section >
+        <div id="total-container">
+        <h1 class="title">Your Shopping Cart</h1>
+        <div id="cart-container"></div>
+            <p id="total-price"></p>
         </div>
-
-        <div class="container">
-            <div class="checkoutscreen">
-                <div class="producten">
-                    <div id="cart-container"></div>
-                </div>
-            </div>
-            <div id="total-container">
-                <p id="total-price"></p>
-            </div>
         </div>
         <div class="buttonpay">
             <button class="pay-button" onclick="pay()">Pay</button>

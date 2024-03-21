@@ -25,17 +25,18 @@ function updateCart() {
     cartProducts.forEach(product => {
         const cartItem = document.createElement('div');
         const productPrice = parseFloat(product.prijs);
+        cartItem.classList.add('geheel');
 
         if (!Number.isNaN(productPrice)) {
             totalPrice += productPrice;
 
             cartItem.innerHTML = `
-                    <div class="alles">
+
                     <td><img class="product-image" src="${product.image}" alt="Foto of ${product.productname}"></td>
                         <td class="product-name"><h1>${product.productname}</h1></td>
                         <td class="product-price"><h3>${productPrice},-</h3></td>
             <td> <button class="product-button" onclick="removeFromCart(${product.id})">remove from cart</button></td>
-                    </div>
+
                 `;
 
             cartContainer.appendChild(cartItem);
