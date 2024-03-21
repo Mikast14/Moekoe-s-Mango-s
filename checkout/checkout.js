@@ -17,10 +17,9 @@ function removeFromCart(id) {
 function updateCart() {
     const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
     const cartContainer = document.getElementById('cart-container');
+    const payButton = document.getElementById('pay-button'); // Assuming there's a pay button with id 'pay-button'
     let totalPrice = 0;
     cartContainer.innerHTML = '';
-
-    totalPrice = 0;
 
     cartProducts.forEach(product => {
         const cartItem = document.createElement('div');
@@ -31,12 +30,12 @@ function updateCart() {
             totalPrice += productPrice;
 
             cartItem.innerHTML = `
-
                     <td><img class="product-image" src="${product.image}" alt="Foto of ${product.productname}"></td>
-                        <td class="product-name"><h1>${product.productname}</h1></td>
-                        <td class="product-price"><h3>${productPrice},-</h3></td>
-            <td> <button class="product-button" onclick="removeFromCart(${product.id})">remove from cart</button></td>
-
+                    <td class="product-name"><h1>${product.productname}</h1></td>
+                    <td class="product-price"><h3>${productPrice},-</h3></td>
+                    <td> 
+                    <button class="product-button" onclick="removeFromCart(${product.id})">remove from cart</button>
+                    </td>
                 `;
 
             cartContainer.appendChild(cartItem);
@@ -48,8 +47,11 @@ function updateCart() {
     const totalElement = document.getElementById('total-price');
     totalElement.textContent = `Total Price: €${totalPrice.toFixed(2)}`;
 
+    payButton.disabled = cartProducts.length <= 0;
+
     localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
 }
+
 
 
 
