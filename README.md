@@ -2,10 +2,10 @@
 Webshop</h1>
 
 <h2>The pages</h2>
-<p>I have made a <a href="https://mikast14.github.io/Moekoes-Mangos/">Visterpage</a></br>
+<p>I have made a <a href="https://mikast14.github.io/Moekoes-Mangos/">Visiterpage</a></br>
 I have made a <a href="https://mikast14.github.io/Moekoes-Mangos/admin/admin.html">Adminpage</a></p>
 
-<h2>How to use the visterpage</h2>
+<h2>How to use the visiterpage</h2>
 <h4>Step 1</h4>
 <p>When you are on the main menu you can scroll down to the products if you want to purch one ore two you can press the shopping cart</p>
 
@@ -15,7 +15,7 @@ I have made a <a href="https://mikast14.github.io/Moekoes-Mangos/admin/admin.htm
 <h4>Step 3</h4>
 <p>if you want you can remove your products with the remove button but if everything is oke you can press the pay button know you have ordered your products</p>
 
-<h4>For the future of the visterpage</h4>
+<h4>For the future of the visiterpage</h4>
 
 <li>Improve the checkout page with as example a way you can realy pay</li>
 <li>To make it mobile friendly</li>
